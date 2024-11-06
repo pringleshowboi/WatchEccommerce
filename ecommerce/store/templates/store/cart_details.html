@@ -1,0 +1,16 @@
+{% extends "store/base.html" %}
+{% block content %}
+<h1 class="mb-4">Your Cart</h1>
+{% if cart.items.count > 0 %}
+    <ul class="list-group">
+        {% for item in cart.items.all %}
+            <li class="list-group-item">
+                {{ item.product.name }} - Quantity: {{ item.quantity }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'store:checkout' %}" class="btn btn-primary mt-3">Proceed to Checkout</a>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

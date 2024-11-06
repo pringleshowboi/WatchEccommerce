@@ -1,0 +1,8 @@
+{% extends "store/base.html" %}
+{% block content %}
+<div class="alert alert-success" role="alert">
+    <h2>Payment Canceled</h2>
+<p>Your payment was canceled. You can try again or return to the store.</p>
+<a href="{% url 'store:product_list' %}">Return to Store</a>
+</div>
+{% endblock %}

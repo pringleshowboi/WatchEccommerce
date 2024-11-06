@@ -1,0 +1,117 @@
+.business-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    height: 100vh; /* Full screen height */
+    width: 100%;
+    flex-direction: column; /* Ensures the text is stacked vertically */
+}
+
+.business-info h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center; /* Centers the title */
+}
+
+.business-info p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Scroll effect */
+.scroll-container {
+    position: relative;
+    z-index: 1;
+}
+
+.scroll-container h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/* Ensures smooth scroll */
+html, body {
+    scroll-behavior: smooth;
+}
+
+
+/* Watch container styling */
+.product-image {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+#watch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+    position: relative;
+}
+
+.watch-item {
+    display: none; /* Initially hidden */
+    transition: opacity 1s ease-in-out;  /* Smooth transition */
+    opacity: 0;
+    text-align: center;
+}
+
+/* Scaling images */
+.watch-item img {
+    width: 40%; /* Scale the image to 100% of its container's width */
+    max-width: 100px; /* Limit the maximum width of the image */
+    height: 100px; /* Maintain aspect ratio */
+}
+
+
+/* Optional: Style for chatbot */
+#chatbot-body {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#chatbot-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#chatbot-input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#chatbot-send {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
